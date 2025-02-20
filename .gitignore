@@ -1,0 +1,5 @@
+# Ignore the out directory
+out/
+
+# Ignore the node_modules directory
+node_modules/

@@ -1,0 +1,11 @@
+{
+  "Sequence": {
+    "prefix": "sequence",
+    "body": [
+      "sequence",
+      "  task '${1:taskName}'",
+      "  task '${2:taskName}'"
+    ],
+    "description": "Create a sequence with two tasks"
+  }
+}

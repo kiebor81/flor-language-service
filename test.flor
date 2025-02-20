@@ -1,0 +1,13 @@
+define phase1
+concurrence
+alice 'call A-N customers'
+bob 'call M-Z customers'
+define phase2
+sequence
+alice 'get customer confirmation'
+bob 'do something else'
+  
+  sequence
+  phase1 _              # function call
+  phase2 _              # function call
+  charly 'final phase'  # tasker invocation

@@ -1,0 +1,37 @@
+{
+  "scopeName": "source.flor",
+  "patterns": [
+    {
+      "name": "keyword.control.flor",
+      "match": "\\b(sequence|task|if|else|while|for|def|return|apply|break|continue|case|collect|cond|cursor|detect|do-return|each|empty?|fail|error|filter|filter-out|find|flatten|for-each|ife|unlesse|_if|_unless|inject|keys|values|length|size|loop|map|match|matchr|match?|pmatch|merge|move|noeval|noret|not|on|on_cancel|on_error|on_receive|push|pushr|rand|range|reduce|reverse|select|reject|sequence|begin|set|setr|shuffle|sample|slice|index|sort|sort_by|stall|downcase|lowercase|lowcase|upcase|uppercase|capitalize|trim|strip|snakecase|snake_case|camelcase|camelCase|timestamp|ltimestamp|to-array|to-object|type-of|type|until|while|abort|kabort|ccollect|c-collect|ceach|c-each|c-for-each|cmap|c-map|cancel|kill|concurrence|cron|do-trap|every|graft|import|on_timeout|schedule|signal|sleep|task|trap)\\b"
+    },
+    {
+      "name": "constant.numeric.flor",
+      "match": "\\b\\d+\\b"
+    },
+    {
+      "name": "string.quoted.single.flor",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.flor",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "comment.line.flor",
+      "begin": "#",
+      "end": "$"
+    },
+    {
+      "name": "variable.language.flor",
+      "match": "\\b(true|false|null)\\b"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["flor"],
+  "name": "Flor",
+  "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+}
