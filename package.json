@@ -2,7 +2,7 @@
   "name": "flor-language",
   "displayName": "Flor Language",
   "description": "VS Code extension for the Flor language",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "publisher": "kiebor81",
   "repository": {
     "type": "git",
@@ -15,15 +15,21 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "onLanguage:flor"
+    "onLanguage:flor",
+    "onCommand:extension.openFlorView"
   ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "languages": [
       {
         "id": "flor",
-        "aliases": ["Flor", "flor"],
-        "extensions": [".flor"],
+        "aliases": [
+          "Flor",
+          "flor"
+        ],
+        "extensions": [
+          ".flor"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -40,6 +46,29 @@
         "path": "./snippets/flor.json"
       }
     ],
+    "commands": [
+      {
+        "command": "extension.openFlorView",
+        "title": "Open Flor View"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "florViewContainer",
+          "title": "Flor",
+          "icon": "resources/flor-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "florViewContainer": [
+        {
+          "id": "florView",
+          "name": "Flor"
+        }
+      ]
+    },
     "configurationDefaults": {
       "[flor]": {
         "editor.formatOnSave": true
@@ -47,9 +76,9 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "webpack",
+    "compile": "webpack",
+    "watch": "webpack --watch",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
@@ -61,6 +90,15 @@
     "@typescript-eslint/parser": "^4.14.1",
     "eslint": "^7.19.0",
     "typescript": "^4.1.3",
-    "vscode-test": "^1.4.0"
+    "vscode-test": "^1.4.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "ts-loader": "^9.2.3"
+  },
+  "dependencies": {
+    "rete": "^2.0.5",
+    "rete-area-plugin": "^2.1.3",
+    "rete-connection-plugin": "^2.0.5",
+    "rete-vue-render-plugin": "^0.5.2"
   }
 }
