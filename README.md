@@ -1,6 +1,6 @@
 # Flor Language Support
 
-This extension provides basic support for the Flor language, including syntax highlighting, snippets, code completion, and code formatting.
+This extension provides basic support for the [Flor language](https://github.com/floraison/flor), including syntax highlighting, snippets, code completion, and code formatting.
 
 ## Features
 
