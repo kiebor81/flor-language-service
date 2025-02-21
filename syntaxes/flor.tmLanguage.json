@@ -21,17 +21,49 @@
       ]
     },
     {
+      "name": "string.quoted.double.flor",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.flor",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.other.flor",
+      "begin": "/",
+      "end": "/",
+      "patterns": [
+        {
+          "name": "constant.character.escape.flor",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
       "name": "comment.line.flor",
       "begin": "#",
       "end": "$"
     },
     {
-      "name": "variable.language.flor",
-      "match": "\\b(true|false|null)\\b"
+      "name": "constant.character.escape.flor",
+      "match": "[;|\\\\\\s_]"
+    },
+    {
+      "name": "keyword.other.head.flor",
+      "match": "^[ ]*[^ ;#\\[\\]{}()]+"
+    },
+    {
+      "name": "keyword.other.key.flor",
+      "match": "[^' ]+\\s*:"
     }
   ],
   "repository": {},
-  "fileTypes": ["flor"],
+  "fileTypes": [
+    "flor"
+  ],
   "name": "Flor",
   "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
 }

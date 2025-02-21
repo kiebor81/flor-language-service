@@ -2,7 +2,7 @@
   "name": "flor-language",
   "displayName": "Flor Language",
   "description": "VS Code extension for the Flor language",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "kiebor81",
   "repository": {
     "type": "git",
